@@ -1,3 +1,7 @@
+root {
+    --gap: 2rem;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -11,6 +15,7 @@
   */
 * {
     margin: 0;
+    font-family: Roboto, sans-serif;
 }
 /*
     Typographic tweaks!
@@ -59,4 +64,172 @@ h6 {
 #root,
 #__next {
     isolation: isolate;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr 3fr;
+}
+
+/* Nav */
+.nav {
+    background-color: #0ea5e9;
+    display: flex;
+    flex-direction: column;
+    grid-row: 1 / 3;
+    padding: 1.5rem;
+    gap: 5rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title-icon {
+    height: 60px;
+    width: 60px;
+}
+
+.title > span {
+    font-weight: 900;
+    font-size: 36px;
+    color: white;
+}
+
+.link-1,
+.link-2 {
+    padding-left: 1rem;
+}
+
+.nav-content-group {
+    display: grid;
+    gap: 1rem;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li > a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+li > a > span {
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+}
+
+/* Header */
+.header {
+    display: grid;
+}
+
+/* Header-top */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+}
+
+.header-top > form {
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+    gap: 1rem;
+}
+
+.header-top > form > button,
+input {
+    border: none;
+}
+
+.header-top > form > button {
+    background-color: #fff;
+}
+
+.header-top > form > input {
+    border-radius: 1rem;
+    background-color: lightgray;
+}
+
+.noti-profile-group > ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+}
+
+.username {
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+
+/* Header-bottom */
+.header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-msg {
+    display: grid;
+}
+
+.welcome-msg > span:first-child {
+    font-weight: 600;
+}
+
+.welcome-msg > span:last-child {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.user-info > img {
+    width: 100px;
+    height: 100px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 2rem;
+}
+
+.btn-group > button {
+    background-color: #0ea5e9;
+    border: none;
+    color: white;
+    font-weight: 900;
+    width: 100px;
+    height: 35px;
+    border-radius: 1rem;
+}
+
+/* Content */
+.content {
+    background-color: lightgray;
 }
